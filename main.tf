@@ -1,8 +1,9 @@
-provider "keycloak" {
-	client_id = var.terraform_auth_client_id
-	client_secret = var.terraform_auth_client_secret
-	realm = var.realm
-	url = var.keycloak_base_url
+terraform {
+	required_providers {
+		keycloak = {
+			version = "~> 1.2"
+		}
+	}
 }
 
 locals {
@@ -20,7 +21,6 @@ locals {
 	}
 	]
 }
-
 
 resource "keycloak_role" "roles" {
 	for_each = {
