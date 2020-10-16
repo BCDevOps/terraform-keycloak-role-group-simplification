@@ -3,24 +3,9 @@ variable "realm" {
 	type        = string
 }
 
-variable "terraform_auth_client_id" {
-	description = "Client ID of client that terraform will authenticate against in order to do its work."
-	type        = string
-}
-
-variable "terraform_auth_client_secret" {
-	description = "Client secret used by Terraform KeyCloak provider authenticate against KeyCloak."
-	type = string
-}
-
 variable "iam_auth_client_id" {
 	description = "Client ID of client where IAM roles will be created."
 	type        = string
-}
-
-variable "keycloak_base_url" {
-	description = "Base URL of KeyCloak instance to interact with."
-	type = string
 }
 
 variable "accounts" {
